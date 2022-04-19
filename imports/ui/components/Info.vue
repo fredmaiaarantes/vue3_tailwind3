@@ -11,7 +11,7 @@ function submit (form) {
   const title = form.title
   const url = form.url
 
-  Meteor.call('links.insert', title.value, url.value, (error) => {
+  Meteor.call('createLink', title.value, url.value, (error) => {
     if (error) {
       alert(error.error)
     } else {
